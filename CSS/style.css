@@ -1,0 +1,532 @@
+html {
+    font-size: 12px;
+}
+
+body {
+    min-width: 320px;
+    max-width: 540px;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+    margin: 0 auto;
+    height: 100%;
+    background: #fafafc;
+}
+
+ul,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+/* 1.搜索模块 */
+.search {
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    height: 44px;
+    background-color: #fff;
+}
+
+.search .input {
+    flex: 1;
+    height: 28px;
+    align-self: center;
+    margin: 0 10px;
+    background-color: #ececed;
+    border-radius: 15px;
+}
+
+.search .input span:first-child {
+    float: left;
+    width: 35px;
+    height: 28px;
+    background: url(../images/header.png) no-repeat 16px 6px;
+    background-size: 21px auto;
+}
+
+.search .input a {
+    float: left;
+    height: 28px;
+    line-height: 28px;
+}
+
+.search .user {
+    width: 51px;
+    height: 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.search .user span {
+    width: 22px;
+    height: 22px;
+    /* background-color: blue; */
+    background: url(../images/header.png) no-repeat 0px -78px;
+    background-size: 21px auto;
+}
+
+/* 2.banner图模块 */
+.banner {
+    margin-top: -44px;
+    height: 259px;
+    background-color: pink;
+    background: url(../images/banner.jpg) no-repeat 0px -55px;
+    background-size: 100% 100%;
+}
+
+/* 3.当地导航栏模块 */
+.local_nav {
+    width: 90%;
+    height: 64px;
+    text-align: center;
+    margin: -90px auto 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    /* 加一个阴影 */
+    box-shadow: 0 0 10px -5px #666;
+}
+
+/* 无序列表显示为弹性布局，让li自动分配空间 */
+.local_nav ul {
+    display: flex;
+}
+
+/* li占父元素的1份 */
+.local_nav ul li {
+    flex: 1;
+}
+
+/* 让a弹性布局，使内部图片和文字垂直居中布局 */
+.local_nav ul li a {
+    display: flex;
+    /* 垂直显示 */
+    flex-direction: column;
+    /* 垂直（主轴）居中 */
+    justify-content: center;
+    /* 水平（侧轴）居中 */
+    align-items: center;
+}
+
+.local_nav ul li span:nth-child(1) {
+    /* 限定图片盒子大小 */
+    width: 40px;
+    height: 40px;
+}
+
+/* 设置第1个li */
+.local_nav ul li:nth-child(1) span:nth-child(1) {
+    background: url(../images/nav.png) no-repeat 0px 0px;
+    /* 让图片cover整个盒子 */
+    background-size: 40px auto;
+}
+
+/* 设置第2个li */
+.local_nav ul li:nth-child(2) span:nth-child(1) {
+    background: url(../images/nav.png) no-repeat 0px -40px;
+    /* 让图片cover整个盒子 */
+    background-size: 40px auto;
+}
+
+/* 设置第3个li */
+.local_nav ul li:nth-child(3) span:nth-child(1) {
+    background: url(../images/nav.png) no-repeat 0px -80px;
+    /* 让图片cover整个盒子 */
+    background-size: 40px auto;
+}
+
+/* 设置第4个li */
+.local_nav ul li:nth-child(4) span:nth-child(1) {
+    background: url(../images/nav.png) no-repeat 0px -120px;
+    /* 让图片cover整个盒子 */
+    background-size: 40px auto;
+}
+
+/* 设置第5个li */
+.local_nav ul li:nth-child(5) span:nth-child(1) {
+    background: url(../images/nav.png) no-repeat 0px -160px;
+    /* 让图片cover整个盒子 */
+    background-size: 40px auto;
+}
+
+/* 4.主导航栏模块 */
+.main_nav {
+    width: 90%;
+    margin: 0 auto;
+    height: 198px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+/* 设置主导航栏区域的三行显示为flex布局 */
+.top,
+.middle,
+.bottom {
+    height: 66px;
+    line-height: 66px;
+    text-align: center;
+    margin-bottom: 1px;
+    display: flex;
+}
+
+/* 设置顶部导航 */
+/* 设置前两个元素的右外边框 */
+/* .top a:nth-child(-n+2) {
+    border-right: 1px solid #fff;
+} */
+
+.top .box1 {
+    height: 66px;
+    width: 54%;
+    background: -webkit-linear-gradient(left, #fa5a55, #fb8550);
+    display: flex;
+}
+
+.top div[class^="box"] {
+    border-right: 1px solid #fff;
+}
+
+/* 第1个 */
+.top .box1 a:nth-of-type(1) {
+    flex: 37.8%;
+    background: url(../images/hotel.png) no-repeat right bottom;
+    background-size: 73px auto;
+    border-right: 1px solid #fff;
+}
+
+/* 第2个 */
+.top .box1 a:nth-of-type(2) {
+    flex: 23%;
+    background: url(../images/house.png) no-repeat left bottom;
+    background-size: 37px auto;
+    background-color: #fa6654;
+}
+
+.top .box2 {
+    width: 45.8%;
+    background: -webkit-linear-gradient(left, #ffbd4a, #ffd252)
+}
+
+/* 第3个 */
+.top .box2 a {
+    display: block;
+    width: 100%;
+    background: url(../images/price.png) no-repeat right bottom;
+    background-size: 241px auto;
+}
+
+/* 设置中部导航 */
+/* 背景渐变 */
+.middle {
+    background: -webkit-linear-gradient(left, #4b90ed, #53bbed);
+}
+
+/* 设置前3个子元素的右外边框  */
+.middle a:nth-child(-n+3) {
+    border-right: 1px solid #fff;
+}
+
+/* 第1个 */
+.middle a:first-child {
+    width: 31%;
+    background: url(../images/airplane.png) no-repeat right bottom;
+    background-size: 80px auto;
+}
+
+/* 第2个 */
+.middle a:nth-of-type(2) {
+    width: 23%;
+    background: url(../images/train.png) no-repeat left bottom;
+    background-size: 37px auto;
+}
+
+/* 第3个,第4个 */
+.middle a:nth-of-type(n+3) {
+    width: 23%;
+}
+
+/* 设置底部导航 */
+/* 背景渐变 */
+.main_nav .bottom {
+    background: -webkit-linear-gradient(left, #35c3a9, #6cd558);
+}
+
+/* 设置前3个子元素有右外边框 */
+.bottom a:nth-child(-n+3) {
+    border-right: 1px solid #fff;
+}
+
+/* 第1个 */
+.bottom a:first-child {
+    width: 31%;
+    background: url(../images/travel.png) no-repeat right bottom;
+    background-size: 93px auto;
+}
+
+/* 第2个 */
+.bottom a:nth-of-type(2) {
+    width: 23%;
+    background: url(../images/travel1.png) no-repeat left bottom;
+    background-size: 61px auto;
+}
+
+/* 第3个,第4个 */
+.bottom a:nth-of-type(n+3) {
+    width: 23%;
+}
+
+/* 5.副导航栏模块 */
+.sub_nav {
+    width: 90%;
+    margin: 0 auto;
+    height: 110px;
+    margin-top: 2px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* 设置a标签内部垂直排列，并居中 */
+.sub_nav a {
+    height: 55px;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 设置a标签里第一个span标签，用于放置背景图 */
+.sub_nav a span:first-child {
+    width: 28px;
+    height: 28px;
+    background: url(../images/sprites.png) no-repeat;
+    background-size: 28px auto;
+}
+
+/* 分别设置背景图位置 */
+.sub_nav a:nth-child(1) span:first-child {
+    background-position: 0px 0px;
+}
+
+.sub_nav a:nth-child(2) span:first-child {
+    background-position: 0px -28px;
+}
+
+.sub_nav a:nth-child(3) span:first-child {
+    background-position: 0px -56px;
+}
+
+.sub_nav a:nth-child(4) span:first-child {
+    background-position: 0px -84px;
+}
+
+.sub_nav a:nth-child(5) span:first-child {
+    background-position: 0px -112px;
+}
+
+.sub_nav a:nth-child(6) span:first-child {
+    background-position: 0px -140px;
+}
+
+.sub_nav a:nth-child(7) span:first-child {
+    background-position: 0px -168px;
+}
+
+.sub_nav a:nth-child(8) span:first-child {
+    background-position: 0px -196px;
+}
+
+.sub_nav a:nth-child(9) span:first-child {
+    background-position: 0px -224px;
+}
+
+.sub_nav a:nth-child(10) span:first-child {
+    background-position: 0px -252px;
+}
+
+/* 6.热门活动模块 */
+.sales {
+    height: 165px;
+    background-color: #fff;
+}
+
+/* 头部 */
+.sales .title {
+    /* 子绝父相 */
+    position: relative;
+    height: 45px;
+    border: 1px solid #dbdbdb;
+    border-left: none;
+    border-right: none;
+}
+
+/* 头部左，绝对定位，垂直居中 */
+.sales .title .left {
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    transform: translateY(-50%);
+}
+
+.sales .title .left span:first-child {
+    display: inline-block;
+    width: 75px;
+    height: 15px;
+    background: url(../images/activity.png) no-repeat 0px -19px;
+    background-size: 79px auto;
+}
+
+.sales .title .left span:last-child {
+    display: inline-block;
+    width: 36px;
+    height: 15px;
+    background: url(../images/ad.png) no-repeat;
+    background-size: 36px auto;
+
+}
+
+/* 头右 */
+.sales .title .right {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+}
+
+.sales .title .right a {
+    display: block;
+    width: 102px;
+    padding: 4px;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #ff5b8f;
+}
+
+/* 伪类实现箭头符号 */
+.sales .title .right a::after {
+    content: "";
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(-45deg);
+}
+
+/* 广告 */
+.ad {
+    height: 116px;
+    background-color: #fff;
+    /* 弹性布局 */
+    display: flex;
+}
+
+.ad_left {
+    position: relative;
+    width: 50%;
+    background: url(../images/ad_1.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+/* 伪类添加广告标识 */
+.ad_left::after {
+    content: "广告";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 26px;
+    height: 14px;
+    color: #fff;
+    padding: 2px 1px 0 0;
+    border-radius: 0px 5px 0px 0px;
+    background-color: #0000004d;
+}
+
+.ad_right {
+    position: relative;
+    width: 50%;
+    background: url(../images/ad_2.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+
+.ad_right::after {
+    content: "广告";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 26px;
+    height: 14px;
+    color: #fff;
+    padding: 2px 1px 0 0;
+    border-radius: 0px 5px 0px 0px;
+    background-color: #0000004d;
+}
+
+/* 7.页脚模块 */
+footer {
+    height: 124px;
+}
+
+/* 工具栏 */
+footer .tool {
+    height: 61px;
+    display: flex;
+    border: 1px solid #dbdbdb;
+    border-left: none;
+    border-right: none;
+    margin-top: 8px;
+}
+
+/* 设置a标签内部垂直排列，并居中 */
+footer .tool a {
+    height: 55px;
+    width: 33.33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 设置a标签里第一个span标签，用于放置背景图 */
+footer .tool a span:first-child {
+    width: 28px;
+    height: 28px;
+    background: url(../images/sprites.png) no-repeat;
+    background-size: 28px auto;
+}
+
+/* 拓展 */
+footer .ver {
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+}
+
+footer .ver a {
+    padding: 0 10px;
+}
+
+/* 版权 */
+footer .copy {
+    color: #999;
+    text-align: center;
+}
+
+footer .copy a {
+    color: #999;
+}
